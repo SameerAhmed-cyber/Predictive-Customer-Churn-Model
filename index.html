@@ -326,26 +326,7 @@
             </div>
         </div>
 
-        <div class="card">
-            <h2>🐍 Model Training Code (XGBoost)</h2>
-            <pre>import pandas as pd
-from xgboost import XGBClassifier
-from sklearn.model_selection import train_test_split
-
-# Load and prepare data
-df = pd.read_csv('customer_data.csv')
-features = ['usage_hours', 'support_tickets', 'days_since_login', 'payment_delay', 'tenure']
-X, y = df[features], df['churned']
-
-# Train XGBoost model
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)
-model = XGBClassifier(n_estimators=200, max_depth=6, learning_rate=0.05)
-model.fit(X_train, y_train)
-
-# Model achieves 91.4% accuracy
-print(f"Accuracy: {model.score(X_test, y_test):.3f}")</pre>
-        </div>
-
+       
         <div class="footer">
             <p>🎯 Model: XGBoost Classifier | 91% Accuracy | ROC-AUC: 0.94 | Deployed via FastAPI</p>
         </div>
